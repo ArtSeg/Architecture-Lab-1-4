@@ -6,9 +6,11 @@
 Для запуска необходимо создать базу данных stankin в MySQL Server:
 
   CREATE DATABASE stankin;
+  
   USE stankin;
 
   CREATE USER 'dbuser'@'%' IDENTIFIED BY 'password';
+  
   GRANT ALL PRIVILEGES ON stankin.* TO 'dbuser'@'%' WITH GRANT OPTION;
 
   CREATE TABLE IF NOT EXISTS data (
@@ -17,6 +19,7 @@
       speed INT,
       service_date DATE
   );
+  
   INSERT INTO data(model, speed, service_date) VALUES
   ('Picasso 3D Designer', 50, '2021-07-02'),
   ('Picasso 3D Designer X', 60, '2022-07-02'),
